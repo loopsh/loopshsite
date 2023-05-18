@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Solid - Tailwind CSS Saas Template</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+  <body
+    x-data="{ page: '404', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <div class="fixed top-0 left-0 -z-10 flex h-full w-full items-center justify-around">
+  <span class="w-[1px] h-full bg-stroke dark:bg-strokedark flex animate-line1"></span>
+  <span class="w-[1px] h-full bg-stroke dark:bg-strokedark flex animate-line2"></span>
+  <span class="w-[1px] h-full bg-stroke dark:bg-strokedark flex animate-line3"></span>
+</div>
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <header
+  class="fixed left-0 top-0 w-full z-99999 py-7"
+  :class="{ 'bg-white dark:bg-black shadow !py-4 transition duration-100' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+>
+  <style>
+    .title-logo {
+      width: 150px;
+      height: auto;
+    }
+    html {
+    scroll-behavior: smooth;
+  }
+  </style>
+  <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
+    <div class="w-full lg:w-1/4 flex items-center justify-between">
+      <a href="index.html">
+        <img class="title-logo dark:hidden" src="images/loopshlogolight.png" alt="Logo Light" />
+        <img class="title-logo hidden dark:block" src="images/loopshlogodark.png" alt="Logo Dark" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button class="lg:hidden block" @click="navigationOpen = !navigationOpen">
+        <span class="block relative cursor-pointer w-5.5 h-5.5">
+          <span class="block absolute w-full h-full">
+            <span class="block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0]" :class="{ '!w-full delay-300': !navigationOpen }"></span>
+            <span class="block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150" :class="{ '!w-full delay-400': !navigationOpen }"></span>
+            <span class="block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200" :class="{ '!w-full delay-500': !navigationOpen }"></span>
+          </span>
+          <span class="block absolute w-full h-full rotate-45">
+            <span class="block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-full" :class="{ 'h-0 delay-[0]': !navigationOpen }"></span>
+            <span class="block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-2.5 w-full h-0.5" :class="{ 'h-0 dealy-200': !navigationOpen }"></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="w-full lg:w-3/4 h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-between"
+      :class="{ '!visible bg-white dark:bg-blacksection shadow-solid-5 h-auto max-h-[400px] overflow-y-scroll rounded-md mt-4 p-7.5': navigationOpen }"
+    >
+      <nav>
+        <ul class="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-10">
+            <li><a class="hover:text-primary" href="#mission">Mission</a></li>
+            <li><a class="hover:text-primary" href="#products">Products</a></li>
+            <li><a class="hover:text-primary" href="#geept">GEEPT.APP</a></li>        
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-6 mt-7 lg:mt-0">
+        <div class="mr-1.5 absolute lg:static top-1 right-17" :class="navigationOpen ? '!visible' : '!visible'">
+          <label class="block m-0 relative">
+            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="cursor-pointer w-full h-full opacity-0 absolute top-0 z-50 m-0" />
+            <img class="dark:hidden" src="images/icon-sun.svg" alt="Sun" />
+            <img class="hidden dark:block" src="images/icon-moon.svg" alt="Moon" />
+          </label>
+        </div>
+
+        <button onclick="location.href='#support'" href="#" class="flex items-center justify-center bg-primary hover:bg-primaryho ease-in-out duration-300 text-white text-regular ud-rounded py-2.5 px-7.5">Contact Us</button>
+      </div>
+    </div>
+    
+  </div>
+</header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== 404 Start ===== -->
+      <section class="pt-45 lg:pt-50 xl:pt-55 pb-25 lg:pb-32.5 xl:pb-37.5 overflow-hidden">
+        <div class="animate_top mx-auto max-w-[518px] text-center">
+          <img src="images/404.svg" alt="404" class="mx-auto mb-7.5" />
+
+          <h2 class="font-semibold text-2xl md:text-4xl text-black dark:text-white mb-5">This Page Does Not Exist</h2>
+          <p class="mb-7.5">The page you were looking for appears to have been moved, deleted or does not exist.</p>
+
+          <button class="inline-flex items-center gap-2.5 bg-black dark:bg-btndark hover:bg-blackho ease-in-out duration-300 font-medium text-white rounded-full px-6 py-3">
+            Return to Home
+            <svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- ===== 404 End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <footer class="bg-white dark:bg-blacksection border-t border-stroke dark:border-strokedark">
+  <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-stroke dark:border-strokedark flex flex-wrap flex-col lg:flex-row items-center justify-center lg:justify-between gap-5 lg:gap-0 py-7">
+      <div class="animate_top">
+        <ul class="flex items-center gap-8">
+          <li><a href="#" class="hover:text-primary">English</a></li>
+          <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="animate_top">
+        <p>&copy; 2023 Loopsh. All rights reserved</p>
+      </div>
+
+      <div class="animate_top">
+        <ul class="flex items-center gap-5">
+          <li>
+            <a href="https://twitter.com/loopshcom">
+              <svg class="fill-[#D1D8E0] hover:fill-primary transition-all duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_48_1502)">
+                  <path
+                    d="M22.162 5.65593C21.3985 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4803 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75098 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.345 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.2641 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.2301 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
+                    fill=""
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_48_1502">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+  </div>
+</footer>
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button
+  class="hidden items-center justify-center w-10 h-10 rounded-[4px] shadow-solid-5 bg-primary hover:bg-primaryho fixed bottom-8 right-8 z-999"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ '!flex' : scrollTop }"
+>
+  <svg class="fill-white w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+  </svg>
+</button>
+
+    <!-- ====== Back To Top End ===== -->
+  <script defer src="bundle.js"></script></body>
+</html>

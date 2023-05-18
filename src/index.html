@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loopsh | Transforming the Way You Interact With AI</title>
+  </head>
+  <body
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+  <style>
+.platform_logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+  </style>
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Start ===== -->
+      <section id="mission" class="pt-35 md:pt-40 xl:pt-46 pb-20 xl:pb-25 overflow-hidden">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
+            <div class="animate_left md:w-1/2">
+              <h4 class="text-black dark:text-white text-lg font-medium mb-4.5">🏗️ We are developing new products to achieve our vision.  </h4>
+              <h1 class="text-black dark:text-white text-3xl xl:text-hero font-bold mb-5">
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1">Orchestrating</span>
+                the Framework For The Smart Internet
+              </h1>
+              <p>At Loopsh, we're breaking boundaries and innovating the future of AI technology, making it more accessible and standardized for businesses and users alike.
+
+              <div class="mt-10">
+                  <div class="flex flex-wrap gap-5">
+                    <button class="flex bg-black hover:bg-blackho dark:bg-btndark text-white ease-in-out duration-300 px-7.5 py-2.5">Learn More</button>
+                    </div>
+              </div>
+            </div>
+            <div class="animate_right md:w-1/2 hidden lg:block">
+              <div class="relative 2xl:-mr-7.5">
+                <img src="./images/shape/shape-02.svg" alt="shape" class="absolute -left-11.5 top-0" />
+                <img src="./images/shape/shape-03.svg" alt="shape" class="absolute -left-11.5 -top-3" />
+                <img src="./images/shape/shape-02.svg" alt="shape" class="absolute right-0 bottom-0" />
+                <img src="./images/shape/shape-03.svg" alt="shape" class="absolute -right-8.5 bottom-0" />
+                <div>
+                  <img class="" src="./images/hero/hero_pic.png" alt="Hero" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Hero End ===== -->
+
+      <!-- ===== Platform Start ===== -->
+      <section class="bg-alabaster dark:bg-black border border-x-0 border-y-stroke dark:border-y-strokedark py-11">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div class="grid grid-cols-3 md:grid-cols-6 gap-7.5 lg:gap-12.5 xl:gap-29 justify-center items-center">
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/aws_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/aws_dark.png" alt="Platform" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/azure_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/azure_dark.png" alt="Platform" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/openai_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/openai_dark.png" alt="Platform" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/googlecloud_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/googlecloud_dark.png" alt="Platform" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/anthropic_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/anthropic_dark.png" alt="Platform" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="platform_logo opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/clarifai_light.png" alt="Platform" />
+              <img class="platform_logo hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/clarifai_dark.png" alt="Platform" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Platform End ===== -->
+
+      <!-- ===== Products Start ===== -->
+      <section id="products" class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `Coming Soon`, sectionSubtitle: `Our Product Suite`, sectionTitlePara: `We're hard at work, creating new state-of-the-art AI-focused technologies. Watch this space for the latest additions to our portfolio`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 xl:gap-12.5 mt-12.5 lg:mt-15 xl:mt-20">
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-02.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Integra</h3> 
+              <h4 class="text-lg font-medium"> Interconnected AI Ecosystem</h4><br>
+              <p>Integra will revolutionize the AI landscape by creating a seamless network of applications and Platform that intelligently interconnect and enhance various AI categories for optimal efficiency.</p>
+            </div>
+            <!-- Products item End -->
+
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-01.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Verbo</h3> 
+              <h4 class="text-lg font-medium"> Innovative NLP Technologies</h4><br>
+              <p>Verbo will harness the power of groundbreaking technologies like OpenAI GPT3, GPT4, Google's PaLM 2, and Anthropic's Claude, all integrated within our unified Verbo platform, taking NLP to new heights.</p>
+            </div>
+            <!-- Products item End -->
+
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-03.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Picta</h3> 
+              <h4 class="text-lg font-medium"> Image Analysis Suite</h4><br>
+              <p>Picta will unlock the full potential of image analysis, employing state-of-the-art technologies such as AWS Rekognition, Google Vision, and Azure Cognitive Services to deliver exceptional insights.</p>
+            </div>
+            <!-- Products item End -->
+
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-04.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Vista</h3> 
+              <h4 class="text-lg font-medium"> Video Analysis Suite</h4><br>
+              <p>Vista will be our avant-garde video analysis platform that leverages the power of cutting-edge technologies to revolutionize real-time video analysis and understanding.</p>
+            </div>
+            <!-- Products item End -->
+
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-05.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Websail</h3> 
+              <h4 class="text-lg font-medium"> Insightful Internet Explorer</h4><br>
+              <p>Websail will discover a new world of digital understanding with Websail, our advanced search engine helper designed to gather and analyze data from the web like never before.</p>
+            </div>
+            <!-- Products item End -->
+
+            <!-- Products item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-06.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5">Synchro</h3> 
+              <h4 class="text-lg font-medium"> Seamless Integration Hubs</h4><br>
+              <p>Experience the future of digital integration with Synchro, our groundbreaking platform that effortlessly connects with third-party services like Spotify, Amazon, and more to redefine user experiences.</p>
+            </div>
+            <!-- Products item End -->
+
+          </div>
+        </div>
+      </section>
+      <!-- ===== Products End ===== -->
+
+      <!-- ===== Geept App Start ===== -->
+      <section id="geept" class="pt-15 pb-20 lg:pb-25 xl:pb-30 overflow-hidden">
+        <div class="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
+          <div class="flex items-center gap-8 lg:gap-32.5">
+            <div class="animate_left hidden md:block md:w-1/2">
+              <img src="./images/about/geept_inchat_light.png" alt="About" class="dark:hidden" />
+              <img src="./images/about/geept_inchat_dark.png" alt="About" class="hidden dark:block" />
+            </div>
+            <div class="animate_right md:w-1/2">
+              <h4 class="text-black dark:text-white font-medium uppercase">
+                <a href="#" class="bg-meta text-white text-metatitle inline-flex rounded-full py-1 px-4.5 mr-4 mb-4">Coming Soon</a> GEEPT.APP
+              </h4>
+              <h2 class="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1">Geept</span> Our Pilot App
+              </h2>
+              <p><b>Geept</b> is an innovative and versatile app, powered by the cutting-edge NLM technology. The app is designed to make users' lives more convenient and enjoyable by providing a wide range of services, all accessible through a single unified, and user-friendly platform.</p>
+
+              <div class="mt-7.5 flex items-center gap-5">
+                <div class="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                  <p class="text-black dark:text-white font-semibold text-metatitle2">01</p>
+                </div>
+                <div class="w-3/4">
+                  <h5 class="text-black dark:text-white text-metatitle2 mb-0.5">Chatting</h5>
+                  <p>Geept's conversational AI capabilities enable users to engage in dynamic, interactive chats with the app. Users can ask questions, seek advice, or simply engage in friendly conversation, receiving human-like responses from the AI. This feature makes Geept an ideal personal assistant and companion, always ready to provide assistance or entertainment.</p>
+                </div>
+              </div>
+              <div class="mt-7.5 flex items-center gap-5">
+                <div class="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                  <p class="text-black dark:text-white font-semibold text-metatitle2">02</p>
+                </div>
+                <div class="w-3/4">
+                  <h5 class="text-black dark:text-white text-metatitle2 mb-0.5">Web Searching</h5>
+                  <p>Geept's intelligent search capabilities can help users find the most relevant information from across the web. By leveraging the power of natural language processing, Geept can understand user queries and return the most accurate search results, making it a valuable tool for research or simply satisfying curiosity.</p>
+                </div>
+              </div>
+              <div class="mt-7.5 flex items-center gap-5">
+                <div class="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                  <p class="text-black dark:text-white font-semibold text-metatitle2">03</p>
+                </div>
+                <div class="w-3/4">
+                  <h5 class="text-black dark:text-white text-metatitle2 mb-0.5">Image Scanning.</h5>
+                  <p>Geept's advanced image recognition capabilities allow users to scan images and identify objects, text, or other visual elements within them. This feature can be used to extract information, translate text, or provide details about specific objects, all in real-time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate_left md:hidden">
+            <img src="./images/about/geept_inchat_light.png" alt="About" class="dark:hidden" />
+            <img src="./images/about/geept_inchat_dark.png" alt="About" class="hidden dark:block" />
+          </div>
+        </div>
+<!--
+      <section>
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{
+              sectionTitle: `GEEPT.APP INTEGRATIONS`,
+              sectionSubtitle: `Streamline Your Digital Life With Seamless Integrations`,
+              sectionTitlePara: `Geept will enhance your digital experience by integrating with popular Platform like Spotify, Apple Music, and Amazon - streamlining tasks such as suggestions, shopping, and entertainment.`
+            }"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+
+        </div>
+        <div class="mx-auto max-w-c-1154 px-4 md:px-8 xl:px-0 relative z-50 mt-15 xl:mt-20">
+          <div class="absolute -top-3/4 -z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+          <div class="flex flex-wrap gap-y-10 justify-around">
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6"></div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#FFDB26] rounded-full w-[11px] h-[11px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6"></div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#62E888] rounded-full w-[15px] h-[15px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#EF5C00] rounded-full w-[23px] h-[23px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#016BFF] rounded-full w-[15px] h-[15px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="" alt="Brand" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+         -->
+
+      </section>
+      <!-- ===== About End ===== -->
+
+      <!-- ===== Contact Start ===== -->
+      <section id="support" class="px-4  md:px-8 2xl:px-0">
+        <div class="mx-auto max-w-c-1390 pb-20 relative lg:pt-15 xl:pt-20 px-7.5 lg:px-15 xl:px-20 overflow-hidden">
+          <div class="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3"></div>
+          <div class="absolute -z-1 bottom-5 left-0 w-full h-1/3">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+
+          <div class="flex flex-wrap md:flex-nowrap flex-col-reverse md:flex-row gap-8 xl:gap-20 md:justify-between">
+            <div class="animate_top w-full shadow-solid-8 rounded-lg bg-white dark:bg-black dark:border dark:border-strokedark p-7.5 xl:p-15">
+              <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-15">Send us a message</h2>
+
+              <form action="https://formbold.com/s/unique_form_id" method="POST">
+                <div class="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+                </div>
+
+                <div class="flex mb-11.5">
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    class="w-full bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white"
+                  ></textarea>
+                </div>
+
+                  <button class="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white px-6 py-3">
+                    Send Message
+                    <svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Contact End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>
