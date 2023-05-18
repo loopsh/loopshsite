@@ -13,7 +13,7 @@ module.exports = {
       hoverdark: '#252A42',
       titlebg: '#ADFFF8',
       titlebg2: '#FFEAC2',
-      titlebgdark: '#46495A',
+      titlebgdark: '#0984e3',
       btndark: '#292E45',
       white: '#FFFFFF',
       black: '#181C31',

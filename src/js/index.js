@@ -67,3 +67,37 @@ sr.reveal(`.animate_right`, {
 
 // Document Loaded
 document.addEventListener('DOMContentLoaded', () => {});
+
+//Dark Mode
+import { createApp } from 'vue';
+
+// Initially set the dark mode to the user's preference
+document.documentElement.classList.toggle('dark', window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+// Listen for changes to the user's preference
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    document.documentElement.classList.toggle('dark', e.matches);
+});
+
+// Your existing Vue.js logic for toggling dark mode
+const app = {
+  data() {
+    return {
+      darkMode: false,
+      navigationOpen: false,
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+      document.documentElement.classList.toggle('dark', this.darkMode);
+    }
+  }
+};
+
+createApp(app).mount('#app');
+
+
+
+
+

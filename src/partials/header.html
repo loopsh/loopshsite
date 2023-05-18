@@ -46,17 +46,7 @@
             <li><a class="hover:text-primary" href="#products">Products</a></li>
             <li><a class="hover:text-primary" href="#geept">GEEPT.APP</a></li>        
         </ul>
-      </nav>
-
-      <div class="flex items-center gap-6 mt-7 lg:mt-0">
-        <div class="mr-1.5 absolute lg:static top-1 right-17" :class="navigationOpen ? '!visible' : '!visible'">
-          <label class="block m-0 relative">
-            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="cursor-pointer w-full h-full opacity-0 absolute top-0 z-50 m-0" />
-            <img class="dark:hidden" src="./images/icon/icon-sun.svg" alt="Sun" />
-            <img class="hidden dark:block" src="./images/icon/icon-moon.svg" alt="Moon" />
-          </label>
-        </div>
-
+      </nav>  
         <button onclick="location.href='#support'" href="#" class="flex items-center justify-center bg-primary hover:bg-primaryho ease-in-out duration-300 text-white text-regular ud-rounded py-2.5 px-7.5">Contact Us</button>
       </div>
     </div>

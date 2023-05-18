@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "@alpinejs/intersect": "^3.10.3",
+    "@sendgrid/mail": "^7.7.0",
     "alpinejs": "^3.10.3",
     "scrollreveal": "^4.0.9",
-    "swiper": "^8.4.2"
+    "swiper": "^8.4.2",
+    "vue": "^3.3.2"
   }
 }
