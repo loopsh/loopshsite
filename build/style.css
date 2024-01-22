@@ -607,6 +607,9 @@ body{
 .mb-5{
   margin-bottom: 1.25rem;
 }
+.mb-8{
+  margin-bottom: 2rem;
+}
 .mb-4\.5{
   margin-bottom: 1.125rem;
 }
@@ -1398,12 +1401,8 @@ body{
 
 @media (min-width: 768px){
 
-  .md\:block{
-    display: block;
-  }
-
-  .md\:hidden{
-    display: none;
+  .md\:mb-0{
+    margin-bottom: 0px;
   }
 
   .md\:w-1\/2{
@@ -1457,10 +1456,6 @@ body{
 
   .lg\:mt-15{
     margin-top: 3.75rem;
-  }
-
-  .lg\:block{
-    display: block;
   }
 
   .lg\:flex{
