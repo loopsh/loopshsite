@@ -619,11 +619,11 @@ body{
 .mt-10{
   margin-top: 2.5rem;
 }
-.mt-12\.5{
-  margin-top: 3.125rem;
+.mr-4{
+  margin-right: 1rem;
 }
-.mt-12{
-  margin-top: 3rem;
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 .mt-7\.5{
   margin-top: 1.875rem;
@@ -631,17 +631,17 @@ body{
 .mt-7{
   margin-top: 1.75rem;
 }
-.mr-4{
-  margin-right: 1rem;
-}
-.mb-6{
-  margin-bottom: 1.5rem;
-}
 .mb-0\.5{
   margin-bottom: 0.125rem;
 }
 .mb-0{
   margin-bottom: 0px;
+}
+.mt-12\.5{
+  margin-top: 3.125rem;
+}
+.mt-12{
+  margin-top: 3rem;
 }
 .mt-15{
   margin-top: 3.75rem;
@@ -679,11 +679,11 @@ body{
 .hidden{
   display: none;
 }
-.h-16{
-  height: 4rem;
-}
 .h-15{
   height: 3.75rem;
+}
+.h-16{
+  height: 4rem;
 }
 .h-\[11px\]{
   height: 11px;
@@ -724,14 +724,14 @@ body{
 .max-h-\[400px\]{
   max-height: 400px;
 }
-.w-16{
-  width: 4rem;
-}
 .w-15{
   width: 3.75rem;
 }
 .w-3\/4{
   width: 75%;
+}
+.w-16{
+  width: 4rem;
 }
 .w-1\/6{
   width: 16.666667%;
@@ -775,11 +775,11 @@ body{
 .max-w-c-1390{
   max-width: 86.875rem;
 }
-.max-w-c-1315{
-  max-width: 82.188rem;
-}
 .max-w-c-1235{
   max-width: 77.188rem;
+}
+.max-w-c-1315{
+  max-width: 82.188rem;
 }
 .max-w-c-1154{
   max-width: 72.125rem;
@@ -887,14 +887,14 @@ body{
 .rounded-full{
   border-radius: 9999px;
 }
+.rounded-\[50\%\]{
+  border-radius: 50%;
+}
 .rounded-lg{
   border-radius: 0.5rem;
 }
 .rounded-\[4px\]{
   border-radius: 4px;
-}
-.rounded-\[50\%\]{
-  border-radius: 50%;
 }
 .rounded-\[10px\]{
   border-radius: 10px;
@@ -918,13 +918,13 @@ body{
 .border-t{
   border-top-width: 1px;
 }
-.border-white{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
 .border-stroke{
   --tw-border-opacity: 1;
   border-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .border-y-stroke{
   --tw-border-opacity: 1;
@@ -943,13 +943,13 @@ body{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-primary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 107 255 / var(--tw-bg-opacity));
-}
 .bg-meta{
   --tw-bg-opacity: 1;
   background-color: rgb(32 197 168 / var(--tw-bg-opacity));
+}
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 107 255 / var(--tw-bg-opacity));
 }
 .bg-\[\#FFDB26\]{
   --tw-bg-opacity: 1;
@@ -1028,10 +1028,6 @@ body{
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
 }
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1039,6 +1035,10 @@ body{
 .px-4\.5{
   padding-left: 1.125rem;
   padding-right: 1.125rem;
+}
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .py-7{
   padding-top: 1.75rem;
@@ -1088,10 +1088,6 @@ body{
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-metatitle{
   font-size: 12px;
   line-height: 20px;
@@ -1099,6 +1095,10 @@ body{
 .text-metatitle2{
   font-size: 20px;
   line-height: 32px;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .text-regular{
   font-size: 16px;
@@ -1615,14 +1615,14 @@ body{
     padding: 3.75rem;
   }
 
-  .xl\:py-30{
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
-  }
-
   .xl\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:py-30{
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 
   .xl\:px-20{
